@@ -10,13 +10,8 @@ fun main(args: Array<String>) {
 
     println("Radius: $radius, Area: $area")
 
-    checkSize(area)
+    println(checkSize(area))
 }
 
-fun checkSize(area: Double) {
-    if (area > 100) {
-        println("This is a Big Circle")
-    } else {
-        print("This is a Small Circle")
-    }
+fun checkSize(area: Double) = if (area > 100) "This is a Big circle" else "This is a Small Circle"
 }
