@@ -14,4 +14,3 @@ fun main() {
 }
 
 fun checkSize(area: Double) = if (area > 100) "This is a Big circle" else "This is a Small Circle"
-}
