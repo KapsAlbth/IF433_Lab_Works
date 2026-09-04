@@ -4,13 +4,15 @@ fun main() {
     val gameTittle: String = "Roblox"
     val price: Int = 700000
 
-    println(calculatestatus(price))
-    printReciept(title = gameTittle, priceAwal = price, finalprice = calculateDiscount(price))
+    val userNote: String? = null
+    printReciept(title = gameTittle, priceAwal = price, finalprice = calculateDiscount(price), userNote = userNote)
 
 }
 
 fun calculateDiscount(price: Int): Int = if (price > 500000) price-price*20/100 else price-price*10/100
 
-fun printReciept(title: String, priceAwal: Int, finalprice: Int) {
+fun printReciept(title: String, priceAwal: Int, finalprice: Int, userNote: String?){
+
     println("Judul: $title, HargaAwal: $priceAwal, HargaAkhir: $finalprice")
+    println("Usernote: ${userNote ?: "Tidak ada Catatan"} ")
 }
