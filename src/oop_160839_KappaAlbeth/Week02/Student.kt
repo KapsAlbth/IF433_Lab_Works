@@ -1,20 +1,20 @@
 package oop_160839_KappaAlbeth.Week02
 
 class Student (
-                val name: String,
+               val name: String,
                val nim: String,
                val major: String
 ){
 
-}
+init {
+    //Validasi Sederhana: Cek panjang NIM
+            if(nim.length !=5) {
+                println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter!")
+            } else {
+                print("Masukkan Jurusan: ")
+                val major = scanner.nextline()
 
-class Student (val name: String, val nim: String, var major: String) {
-    init {
-        if (nim.length != 5) {
-            println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!")
-            println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
-        } else {
-            println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
-        }
-    }
+                val s1 = Student(name, nim, major)
+                println("Status: Pendaftaran selesai.")
+            }
 }
