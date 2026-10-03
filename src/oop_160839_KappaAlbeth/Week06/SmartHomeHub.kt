@@ -17,4 +17,19 @@ class SmartHomeHub {
             }
         }
     }
+
+    fun activateSecurityMode() {
+        println("\n=== MENGAKTIFKAN MODE KEAMANAN ===")
+        for (device in devices) {
+            // Smart Casting: Deteksi Recordable
+            if (device is Recordable) {
+                device.startRecord()
+            }
+
+            // Smart Casting: Deteksi SmartSpeaker
+            if (device is SmartSpeaker) {
+                device.playMusic("Sirine Peringatan")
+            }
+        }
+    }
 }
