@@ -35,10 +35,15 @@ fun main() {
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
+    println(uiMessage)
 
     println("\n=== TEST GAME MANAGER SINGLETON ===")
     GameManager.startGame()
     GameManager.startGame()
 
-    println(uiMessage)
+    println("\n=== TEST FACTORY & ENUM ===")
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Senjata Awal: ${starterWeapon.item.name} (Damage: ${starterWeapon.item.damage}, Rarity: ${starterWeapon.item.rarity}, Durability: ${starterWeapon.durability})")
 }
