@@ -9,4 +9,5 @@ interface Clickable {
         override fun click() {
             println("Tombol '$name' berhasil diklik!")
         }
+    }
 }
