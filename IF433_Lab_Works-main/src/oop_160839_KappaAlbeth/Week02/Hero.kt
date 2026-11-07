@@ -1,0 +1,23 @@
+package oop_160839_KappaAlbeth.Week02
+
+class Hero(
+    val name: String,
+    val baseDamage: Int,
+    var hp: Int = 100 // Default argument HP = 100
+) {
+    fun attack(targetName: String) {
+        println("$name menebas $targetName!")
+    }
+
+    fun takeDamage(damage: Int) {
+        hp -= damage
+        // Mencegah HP bernilai minus
+        if (hp < 0) {
+            hp = 0
+        }
+    }
+
+    fun isAlive(): Boolean {
+        return hp > 0
+    }
+}
