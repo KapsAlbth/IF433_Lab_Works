@@ -1,6 +1,6 @@
 package oop_160839_KappaAlbeth.Week02
 
-import Student
+import oop_160839_KappaAlbeth.Week09.Student
 import java.util.Scanner
 
 fun main() {
